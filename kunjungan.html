@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kunjungan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>OUH – Orang Utan Haven</h1>
+        <p>Menyelamatkan dan merawat 6 ekor orang utan di Sumatera</p>
+    </header>
+
+    <button class="menu-btn" onclick="openMenu()">☰</button>
+    <div id="sidebar" class="sidebar">
+        <a href="javascript:void(0)" class="close-btn" onclick="closeMenu()">×</a>
+        <a href="index.html">Dashboard</a>
+        <a href="kunjungan.html">Kunjungan</a>
+        <a href="peta.html">Peta</a>
+        <a href="about.html">About Us</a>
+    </div>
+
+    <main>
+        <div class="container">
+            <h2>OUH-Orang Utan Haven</h2>
+
+            <form action="proses.php" method="POST">
+
+                <div class="form-group">
+                    <label><i class="fa fa-user"></i> Nama Lengkap</label>
+                    <input type="text" name="nama" placeholder="Contoh: Budi" required>
+                </div>
+
+                <div class="form-group">
+                    <label><i class="fa fa-phone"></i> Nomor Handphone/WhatsApp</label>
+                    <input type="text" name="hp" placeholder="Contoh: +628123456789" required>
+                    <small>*Harus dimulai dengan kode negara (+62..)</small>
+                </div>
+
+                <div class="form-group">
+                    <label><i class="fa fa-building"></i> Instansi Asal</label>
+                    <input type="text" name="instansi" placeholder="Contoh: Universitas Satya Terra Bhinneka" required>
+                </div>
+
+                <div class="form-group">
+                    <label><i class="fa fa-map-marker-alt"></i> Alamat</label>
+                    <input type="text" name="alamat" placeholder="Contoh: Jl. Merdeka No. 123" required>
+                </div>
+
+                <div class="form-group">
+                    <label><i class="fa fa-info-circle"></i> Keperluan</label>
+                    <textarea name="keperluan" placeholder="Jelaskan tujuan kunjungan Anda..." required></textarea>
+                </div>
+
+                <button type="submit"><i class="fa fa-paper-plane"></i> Submit</button>
+
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 OUH – Orang Utan Haven. Medan, Sumatera Utara.</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,352 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url(background.jpeg);
+    font-family: "Arial", sans-serif;
+
+    color: #333333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: rgb(14, 141, 14);
+    color: #ffffffff;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 0.5rem;
+    font-size: 2.2rem;
+}
+
+header p {
+    opacity: 0.9;
+    font-size: 1rem;
+}
+
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+nav a:hover {
+    color: var(--primary-color);
+}
+
+.menu-btn {
+    font-size: 30px;
+    cursor: pointer;
+    background: rgb(14, 141, 14);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    z-index: 1001;
+    border-radius: 8px;
+}
+
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    background: rgba(14, 141, 14, 0.55);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    overflow-x: hidden;
+    transition: 0.4s;
+    padding-top: 60px;
+}
+
+/* Isi menu */
+.sidebar a {
+    padding: 15px 25px;
+    text-decoration: none;
+    font-size: 22px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Tombol X */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 35px;
+}
+
+
+main h2 {
+    color: #90402B;
+    text-align: center;
+    font-size: 38px;
+    text-shadow: 2px 2px 5px black;
+    margin-bottom: 20px;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    justify-content: center;
+
+}
+
+
+.card {
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.65);
+    /* transparan halus */
+    border-radius: 15px;
+
+    border: 1px solid rgba(255, 255, 255, 0.5);
+
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+
+    padding: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    position: relative;
+    overflow: hidden;
+
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2)
+}
+
+.card:hover {
+    transform: scale(1.02);
+}
+
+
+
+.card h3 {
+    margin-top: 0;
+    color: #8b4513;
+    font-size: 1.3rem;
+}
+
+.card .species {
+    font-weight: 600;
+    color: #3e2723;
+}
+
+.card .info {
+    margin: 0.3rem 0;
+    font-size: 0.95rem;
+}
+
+.card .gender {
+    font-style: italic;
+    color: #5d4037;
+}
+
+footer {
+    margin-top: 3rem;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    background-color: rgb(14, 141, 14);
+    color: #fff;
+    font-size: 0.9rem;
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 8px;
+}
+
+.judul-peta {
+    color: #90402B;
+    text-align: center;
+    font-size: 38px;
+    text-shadow: 2px 2px 5px black;
+    margin-bottom: 20px;
+}
+
+.feature-image {
+    display: block;
+    margin: 20px auto;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.gambar-wrapper {
+    position: relative;
+    width: fit-content;
+    margin: 40px auto;
+    padding-bottom: 40px;
+}
+
+.feature-image {
+    width: 800px;
+    max-width: 100%;
+    height: 500px;
+    object-fit: cover;
+    display: block;
+    border-radius: 15px;
+}
+
+.keterangan {
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    transform: translateX(-50%);
+
+    background: rgba(14, 141, 14, 0.85);
+    color: white;
+
+    padding: 10px 25px;
+    border-radius: 10px;
+    font-size: 24px;
+    font-weight: bold;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.container {
+    max-width: 700px;
+    margin: 3rem auto;
+    padding: 2rem;
+
+    background: rgba(255, 255, 255, 0.70);
+    border-radius: 18px;
+    border: 1px solid rgba(255,255,255,0.5);
+
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+.container h2 {
+    color: #90402B;
+    text-align: center;
+    font-size: 34px;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    margin-bottom: 25px;
+}
+
+form {
+    width: 100%;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #3e2723;
+    font-size: 15px;
+}
+
+.form-group label i {
+    color: rgb(14, 141, 14);
+    margin-right: 8px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border-radius: 10px;
+    border: 1px solid rgba(0,0,0,0.15);
+    font-size: 15px;
+    outline: none;
+
+    background: rgba(255,255,255,0.85);
+    transition: 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: rgb(14, 141, 14);
+    box-shadow: 0 0 0 3px rgba(14,141,14,0.15);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 130px;
+}
+
+small {
+    display: block;
+    margin-top: 6px;
+    color: #666;
+    font-size: 13px;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+
+    background: rgb(14, 141, 14);
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background: rgb(10, 110, 10);
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .container {
+        margin: 1.5rem;
+        padding: 1.5rem;
+    }
+
+    .container h2 {
+        font-size: 28px;
+    }
+}
+
+.card ul {
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+.card ul li {
+    margin-bottom: 6px;
+}
